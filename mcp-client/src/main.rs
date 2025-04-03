@@ -36,8 +36,8 @@ async fn main() -> eyre::Result<()> {
 
     let tool_result = mcp_client
         .call_tool(CallToolRequestParam {
-            name: "list_directory".into(),
-            arguments: Some(object!({ "path": "/Users/Akagi201/Desktop" })),
+            name: "echo".into(),
+            arguments: Some(object!({ "message": "hello" })),
         })
         .await?;
     info!("Tool result: {tool_result:#?}");

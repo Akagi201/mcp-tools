@@ -6,6 +6,5 @@ protocol = "stdio"
 command = "npx"
 args = [
   "-y",
-  "@modelcontextprotocol/server-filesystem",
-  "/Users/Akagi201/Desktop",
+  "@modelcontextprotocol/server-everything",
 ]
