@@ -1,10 +1,6 @@
 [mcp]
 
 [mcp.server]
-name = "git"
-protocol = "stdio"
-command = "npx"
-args = [
-  "-y",
-  "@modelcontextprotocol/server-everything",
-]
+name = "aptos_dex"
+protocol = "sse"
+url = "http://127.0.0.1:8001/sse"

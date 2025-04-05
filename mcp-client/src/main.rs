@@ -36,11 +36,12 @@ async fn main() -> eyre::Result<()> {
 
     let tool_result = mcp_client
         .call_tool(CallToolRequestParam {
-            name: "echo".into(),
-            arguments: Some(object!({ "message": "hello" })),
+            name: "get_pairs_by_token_addresses".into(),
+            arguments: Some(object!({ "token_addresses": ["0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b"] })),
         })
         .await?;
     info!("Tool result: {tool_result:#?}");
+
     mcp_client.cancel().await?;
     Ok(())
 }
